@@ -6,13 +6,17 @@
   "scripts": {
     "start": "webpack-dev-server",
     "dist": "webpack",
-    "test": "mocha"
+    "test": "mocha --require babel-register"
   },
   "author": "Matt Pilcher",
   "license": "ISC",
   "dependencies": {
+    "chai": "^4.1.2",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "sinon": "^6.2.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
