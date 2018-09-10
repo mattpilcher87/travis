@@ -9,9 +9,9 @@ class Base extends Component {
       <div>
         <div>
           <div>
-            <h2>Hello</h2>
+            <h1>Hello</h1>
             <h2>Cheese</h2>
-            
+
         {/* <Header />
         <Footer /> */}
           </div>
