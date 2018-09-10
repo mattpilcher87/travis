@@ -11,6 +11,7 @@ class Base extends Component {
           <div>
             <h2>Hello</h2>
             <h2>Cheese</h2>
+            
         {/* <Header />
         <Footer /> */}
           </div>
