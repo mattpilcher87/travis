@@ -18,7 +18,7 @@ const config = {
     },
     devServer: {
       contentBase: path.join(__dirname, "dist"),
-      port: 8080,
+      port: 9001,
       open: true
     }
 };
