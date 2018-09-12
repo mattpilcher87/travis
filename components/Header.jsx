@@ -27,7 +27,7 @@ class Header extends Component {
         <ul className='nav-bar'>
           <li onClick={this.changeActive}>One</li>
           <li>Two</li>
-          <li>Three</li>
+          <li>Three</li> 
         </ul>
       </div>
     )
