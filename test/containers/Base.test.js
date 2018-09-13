@@ -4,35 +4,31 @@ import { configure, shallow } from 'enzyme';
 import { expect } from 'chai';
 import sinon from 'sinon';
 import Base from '../../containers/Base.jsx';
+import Header from '../../components/Header.jsx';
+import Footer from '../../components/Footer.jsx';
 
 import Adapter from 'enzyme-adapter-react-16';
 configure({ adapter: new Adapter() });
 
-// describe('Base Testing', function() {
-//   it('should pass', function() {
-//
-//     var user = {
-//       setName: function(name){
-//         this.name = name;
-//       }
-//     }
-//
-//     //Create a spy for the setName function
-//     var setNameSpy = sinon.spy(user, 'setName');
-//
-//     //Now, any time we call the function, the spy logs information about it
-//     user.setName('Darth Vader');
-//     user.setName('Darth Vader');
-//     user.setName('Darth Vader');
-//
-//     //Which we can see by looking at the spy object
-//     console.log(setNameSpy.callCount); //output: 3
-//
-//     //Important final step - remove the spy
-//     setNameSpy.restore();
-//
-//     const wrapper = shallow(<Base />);
-//     const welcome = <h1>Hello</h1>;
-//     expect(wrapper.contains(welcome)).to.equal(true);
-//   })
-// })
+describe('Base Component', function() {
+  let wrapper
+  beforeEach(function() {
+    wrapper = shallow(<Base />);
+  })
+
+  it('should render a Header Component', function() {
+    expect(wrapper.find(Header).exists()).to.equal(true);
+  })
+
+  it('with the prop of testArr equaling ["one", "two", "three"]', function() {
+    expect(wrapper.find(Header).props().testArr).to.have.all.members(['one', 'two', 'three'])
+  })
+
+  it('with the prop of testNumber equaling 7', function() {
+    expect(wrapper.find(Header).props().testNumber).to.equal(7)
+  })
+
+  it('should render a Footer Component', function() {
+    expect(wrapper.find(Footer).exists()).to.equal(true);
+  })
+})
