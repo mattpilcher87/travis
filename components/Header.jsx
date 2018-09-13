@@ -6,6 +6,7 @@ class Header extends Component {
     super()
     this.changeActive = this.changeActive.bind(this)
     this.multiplyNumber = this.multiplyNumber.bind(this)
+    this.testFunction = this.testFunction.bind(this)
   }
 
   changeActive() {
@@ -14,6 +15,10 @@ class Header extends Component {
 
   multiplyNumber(number1, number2) {
     return number1 * number2
+  }
+
+  testFunction(foo = true) {
+    return foo
   }
 
   render() {
@@ -27,7 +32,7 @@ class Header extends Component {
         <ul className='nav-bar'>
           <li onClick={this.changeActive}>One</li>
           <li>Two</li>
-          <li>Three</li> 
+          <li>Three</li>
         </ul>
       </div>
     )
